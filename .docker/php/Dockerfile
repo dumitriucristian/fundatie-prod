@@ -16,3 +16,6 @@ RUN docker-php-ext-configure gd \
     --with-freetype-dir
 
 RUN docker-php-ext-install gd
+
+WORKDIR /var/www/html
+
