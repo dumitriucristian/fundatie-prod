@@ -19,7 +19,6 @@ services:
       - DB_DATABASE=${DB_DATABASE}
       - DB_USERNAME=${DB_USERNAME}
       - DB_PASSWORD=${DB_PASSWORD}
-      - APP_KEY=${APP_KEY}
     container_name: fundatie_web_1
 
   mysql:
