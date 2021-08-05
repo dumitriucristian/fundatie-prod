@@ -1,8 +1,8 @@
-name: Success
-description: 'Modular Octobercms theme'
-author: 'Charis Ketikidis'
-homepage: 'https://www.ketikidis.com'
-code: octobercms-success
+name: "Custom"
+description: "Modular Octobercms theme"
+author: Charis Ketikidis
+homepage: "https://www.ketikidis.com"
+code: 
 authorCode: Ketikidis
 form: config/fields.yaml
 require:
@@ -16,4 +16,3 @@ require:
     - Rahman.BlogTags
     - Martin.Ssbuttons
     - GrofGraf.ContactMe
-parent: ketikidis-octobercms-success

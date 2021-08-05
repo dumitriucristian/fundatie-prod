@@ -7,10 +7,18 @@
 
     if ($useRowLink) $classes[] = 'list-rowlink';
     if (!$showPagination) $classes[] = 'no-pagination';
+    if (!$showReorder) $classes[] = 'list-no-reorder';
 ?>
 <div
     class="control-list <?= implode(' ', $classes) ?>"
-    data-control="listwidget">
+    data-control="liststructurewidget"
+    data-reorder-handler="<?= $this->getEventHandler('onReorder') ?>"
+    data-toggle-handler="<?= $this->getEventHandler('onToggleTreeNode') ?>"
+    data-use-reorder="<?= $showReorder ?>"
+    data-include-sort-orders="<?= $includeSortOrders ?>"
+    data-stripe-load-indicator
+    <?php if ($maxDepth !== null): ?>data-max-depth="<?= $maxDepth ?>"<?php endif ?>
+>
     <table class="table data" <?= $useRowLink ? 'data-control="rowlink"' : '' ?>>
         <thead>
             <?= $this->makePartial('list_head_row') ?>
