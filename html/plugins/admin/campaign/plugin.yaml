@@ -1,0 +1,6 @@
+plugin:
+    name: 'admin.campaign::lang.plugin.name'
+    description: 'admin.campaign::lang.plugin.description'
+    author: admin
+    icon: oc-icon-adjust
+    homepage: ''
