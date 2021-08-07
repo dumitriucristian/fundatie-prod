@@ -24,5 +24,5 @@ class Campaigns extends ComponentBase
     {
         return Campaign::all();
     }
-
+    
 }

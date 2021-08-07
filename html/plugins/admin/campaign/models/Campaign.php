@@ -20,4 +20,10 @@ class Campaign extends Model
      */
     public $rules = [
     ];
+
+    /* Relations */
+    public $attachOne = [
+        'picture' => 'System\Models\File',
+    ];
+
 }

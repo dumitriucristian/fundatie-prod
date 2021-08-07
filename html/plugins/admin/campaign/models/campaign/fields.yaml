@@ -15,3 +15,21 @@ fields:
         span: auto
         required: 1
         type: datepicker
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    picture:
+        label: Picture
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        imageWidth: '200'
+        imageHeight: '300'
+        type: fileupload
