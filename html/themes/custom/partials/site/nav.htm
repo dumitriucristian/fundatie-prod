@@ -1,7 +1,5 @@
 description = "Main Menu"
-
 [viewBag]
-
 [staticMenu]
 code = "mainmenu"
 ==
@@ -23,29 +21,72 @@ code = "mainmenu"
 {% endif %}
 {% endfor %}
 {% endmacro %}
-<nav class="navbar navbar-expand-md navbar-light nav-bg" {% if this.theme.stickymenu_js %}data-toggle="sticky-onscroll"{% endif %}>
-<div class="container">
-   <a class="navbar-brand" href="{{ 'index'|staticPage }}">
-      {% if this.theme.settings_brand == 'logo' %}
+
+<a class="navbar-brand" href="{{ 'index'|staticPage }}">
+   {% if this.theme.settings_brand == 'logo' %}
       {% if this.theme.settings_brand_logo %}
-      <img src="{{ this.theme.settings_brand_logo|media }}" alt="logo">
-      {% else %}
-      <img src="{{ 'assets/images/logo.png'|theme }}" alt="">
-      {% endif %}
-      {% endif %}
-      {% if this.theme.settings_brand == 'text' %}
-      <div class="navbar-brand">{{ this.theme.settings_brand_text }}</div>
-      {% endif %}
-   </a>
+         <img src="{{ this.theme.settings_brand_logo|media }}" class="logo-shadow" alt="logo">
+         
+         {% else %}
+         <img src="{{ 'assets/images/logo.png'|theme }}"  alt="">
+         {% endif %}
+   {% endif %}
+   {% if this.theme.settings_brand == 'text' %}
+   <div class="navbar-brand">{{ this.theme.settings_brand_text }}</div>
+   {% endif %}
+</a>   
+<nav class="navbar navbar-expand-md navbar-light nav-bg" {% if this.theme.stickymenu_js %}data-toggle="sticky-onscroll"{% endif %}>
+   
+
+<div class="container">
+   
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
    <i class="fa fa-bars" aria-hidden="true"></i>
    </button>
+
+
+   <button class="button" id="doneaza">Doneaza</button>
+   
+
+   
    <div class="collapse navbar-collapse" id="main-menu">
       {% if staticMenu.menuItems %}
-      <ul class="navbar-nav mr-auto w-100 justify-content-end">
-         {{ nav.render_menu(staticMenu.menuItems) }}
+      <ul class="navbar-nav mr-auto w-100 justify-content-center">
+       {% for item in staticMenu.menuItems|slice(0,2) if not item.viewBag.isHidden %}
+            {% if item.items  %}
+            <li role="presentation" class="nav-item dropdown {{ item.isActive ? 'active' }} {{ item.isChildActive ? 'active' }} {{ item.viewBag.cssClass }}">
+               <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }} class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{ item.title }}</a>
+               <ul class="dropdown-menu">
+                  {{ nav.render_menu(item.items) }}
+               </ul>
+            </li>
+            {% else %}
+            <li role="presentation" class="nav-item {{ item.isActive ? 'active' }} {{ item.isChildActive ? 'active' }} {{ item.viewBag.cssClass }}">
+               <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }} class="nav-link">{{ item.title }}</a>
+            </li>
+            {% endif %}
+      {% endfor %}
       </ul>
+
+
+      <ul class="navbar-nav mr-auto w-100 justify-content-center">
+         {% for item in staticMenu.menuItems|slice(2) if not item.viewBag.isHidden %}
+              {% if item.items %}
+              <li role="presentation" class="nav-item dropdown {{ item.isActive ? 'active' }} {{ item.isChildActive ? 'active' }} {{ item.viewBag.cssClass }}">
+                 <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }} class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{ item.title }}</a>
+                 <ul class="dropdown-menu">
+                    {{ nav.render_menu(item.items) }}
+                 </ul>
+              </li>
+              {% else %}
+              <li role="presentation" class="nav-item {{ item.isActive ? 'active' }} {{ item.isChildActive ? 'active' }} {{ item.viewBag.cssClass }}">
+                 <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }} class="nav-link">{{ item.title }}</a>
+              </li>
+              {% endif %}
+        {% endfor %}
+        </ul>
       {% endif %}
+
    </div>
 </div>
 </nav>
