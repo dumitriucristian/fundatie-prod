@@ -21,7 +21,23 @@ code = "mainmenu"
 {% endif %}
 {% endfor %}
 {% endmacro %}
+
+<a class="navbar-brand" href="{{ 'index'|staticPage }}">
+   {% if this.theme.settings_brand == 'logo' %}
+      {% if this.theme.settings_brand_logo %}
+         <img src="{{ this.theme.settings_brand_logo|media }}" class="logo-shadow" alt="logo">
+         
+         {% else %}
+         <img src="{{ 'assets/images/logo.png'|theme }}"  alt="">
+         {% endif %}
+   {% endif %}
+   {% if this.theme.settings_brand == 'text' %}
+   <div class="navbar-brand">{{ this.theme.settings_brand_text }}</div>
+   {% endif %}
+</a>   
 <nav class="navbar navbar-expand-md navbar-light nav-bg" {% if this.theme.stickymenu_js %}data-toggle="sticky-onscroll"{% endif %}>
+   
+
 <div class="container">
    
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,10 +45,13 @@ code = "mainmenu"
    </button>
 
 
-   <button class="button">Doneaza</button>
+   <button class="button" id="doneaza">Doneaza</button>
+   
+
+   
    <div class="collapse navbar-collapse" id="main-menu">
       {% if staticMenu.menuItems %}
-      <ul class="navbar-nav mr-auto w-100 justify-content-around">
+      <ul class="navbar-nav mr-auto w-100 justify-content-center">
        {% for item in staticMenu.menuItems|slice(0,2) if not item.viewBag.isHidden %}
             {% if item.items  %}
             <li role="presentation" class="nav-item dropdown {{ item.isActive ? 'active' }} {{ item.isChildActive ? 'active' }} {{ item.viewBag.cssClass }}">
@@ -49,20 +68,8 @@ code = "mainmenu"
       {% endfor %}
       </ul>
 
-      <a class="navbar-brand" href="{{ 'index'|staticPage }}">
-         {% if this.theme.settings_brand == 'logo' %}
-            {% if this.theme.settings_brand_logo %}
-               <img src="{{ this.theme.settings_brand_logo|media }}" alt="logo">
-               {% else %}
-               <img src="{{ 'assets/images/logo.png'|theme }}" alt="">
-               {% endif %}
-         {% endif %}
-         {% if this.theme.settings_brand == 'text' %}
-         <div class="navbar-brand">{{ this.theme.settings_brand_text }}</div>
-         {% endif %}
-      </a>
 
-      <ul class="navbar-nav mr-auto w-100 justify-content-around">
+      <ul class="navbar-nav mr-auto w-100 justify-content-center">
          {% for item in staticMenu.menuItems|slice(2) if not item.viewBag.isHidden %}
               {% if item.items %}
               <li role="presentation" class="nav-item dropdown {{ item.isActive ? 'active' }} {{ item.isChildActive ? 'active' }} {{ item.viewBag.cssClass }}">
