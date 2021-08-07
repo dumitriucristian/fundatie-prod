@@ -1,0 +1,24 @@
+items:
+    -
+        title: Home
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: index
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Pages
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: pages
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: left-main-menu
