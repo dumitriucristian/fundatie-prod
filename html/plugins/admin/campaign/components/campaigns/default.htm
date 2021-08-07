@@ -1,0 +1,7 @@
+{% set campaigns = __SELF__.campaigns %}
+
+<ul>
+    {% for campaign in campaigns %}
+        <li>{{ campaign.name }}</li>
+    {% endfor %}
+</ul>
