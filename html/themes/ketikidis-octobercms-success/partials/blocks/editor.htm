@@ -1,0 +1,23 @@
+[viewBag]
+==
+<section id="service-block-main" class="section" style="background-color: {{ data.section_editor_bg }};">
+    {% if data.section_editor_container %}
+    <div class="{{ data.section_editor_container }}">
+    {% else %}
+    <div class="container">
+        {% endif %}
+      <div class="row">
+         <div class="col-md-12">
+            <h1 class="section-title" data-aos="fade-up" data-aos-delay="300">{{ data.section_editor_header }}</h1>
+            <p class="section-subcontent" data-aos="fade-up" data-aos-delay="400">{{ data.section_editor_subheader }}</p>
+         </div>
+         {% for fields in data.section_editor %}
+         <div class="{{ fields.section_editor_size }}">
+            <div class="editor-item" data-aos="fade-up" data-aos-delay="500">
+               {{ fields.section_editor_item|raw }}
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+</section>
