@@ -8,7 +8,6 @@ use Model;
 class Campaign extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    
 
     /**
      * @var string The database table used by the model.
@@ -25,5 +24,10 @@ class Campaign extends Model
     public $attachOne = [
         'picture' => 'System\Models\File',
     ];
+
+    public function getPercentageMoney() :int
+    {
+        return $this->raised_money*100 / $this->target_money;
+    }
 
 }
