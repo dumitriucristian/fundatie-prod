@@ -6,8 +6,28 @@ code = "footer-main-menu"
 [staticMenu staticMenu2]
 code = "footermenu"
 ==
+<div class="footer-wave"></div>
 <div class="container">
    <div class="row section">
+      <div class="col-md-12  d-flex p-2 flex-column  align-items-center" >
+         <p id="phone-number-footer">+40 753 310 011</p>
+         <div id="social-media-footer" class="d-flex flex-row justify-content-center align-items-center flex-wrap ">
+               <a href="mirela-retegan"><img src="{{'assets/images/logo-mirela-retegan-footer.svg'|theme}}" class="footer-icon m-2"></a>
+               <a href="facebook"><img src="{{'assets/images/fb_btn.svg'|theme}}" class="footer-icon m-2"></a>
+               <a href="youtube"><img src="{{'assets/images/youtube_btn.svg'|theme}}" class="footer-icon m-2"></a>
+               <a href="linkedin"><img src="{{'assets/images/linkedin_btn.svg'|theme}}" class="footer-icon m-2"></a>
+               <a href="doneaza"><img src="{{'assets/images/doneaza_btn.svg'|theme}}" class="footer-icon m-2"></a>
+               <a href="zurliz"><img src="{{'assets/images/logo-zurli-footer.svg'|theme}}" class="footer-icon m-2"></a>
+         </div>
+         <div id="privacy-footer" class="d-flex flex-wrap align-items-center justify-content-center m-2" class>
+              <a href="#" class="m-2">Termeni si conditii</a> 
+              <a href="#" class="m-2">Politica de confidentialitate</a> 
+              <a href="#" class="m-2">Protectia datelor cu caracter persoanl</a>
+         </div>
+         <img src="{{'/assets/images/netopia_banner_blue_sm.jpg'|theme}}" class="mt-2"> 
+      </div>
+
+      <!--
       <div class="footer-widget col-md-3 col-xs-12" data-aos="fade-up" data-aos-delay="100">
          <h3 class="small-title">ABOUT US</h3>
          <p>Etiam ornare condimentum massa et scelerisque. Mauris nibh ipsum, laoreet at venenatis ac, rutrum sed risus,<br>Aliquam magna nibh, mattis a urna nec. Semper venenatis magna.</p>
@@ -71,39 +91,12 @@ code = "footermenu"
             </div>
          </div>
       </div>
+   -->
    </div>
 </div>
 <div id="copyright">
    <div class="container">
-      <div class="row">
-         <div class="col-md-6 col-sm-6">
-            <p class="copyright-text">© {{ "now"|date("Y") }} {{ this.theme.site_name }}. All right reserved.</p>
-         </div>
-         <div class="col-md-6 col-sm-6">
-            {% import _self as nav %}
-            {% macro render_menu(items) %}
-            {% import _self as nav %}
-            {% for item in items if not item.viewBag.isHidden %}
-            {% if item.items %}
-            <li role="presentation" class="nav-item dropdown {{ item.isActive ? 'active' }} {{ item.isChildActive ? 'active' }} {{ item.viewBag.cssClass }}">
-               <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }} class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{ item.title }}</a>
-               <ul class="dropdown-menu">
-                  {{ nav.render_menu(item.items) }}
-               </ul>
-            </li>
-            {% else %}
-            <li role="presentation" class="nav-item {{ item.isActive ? 'active' }} {{ item.isChildActive ? 'active' }} {{ item.viewBag.cssClass }}">
-               <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }} class="nav-link">{{ item.title }}</a>
-            </li>
-            {% endif %}
-            {% endfor %}
-            {% endmacro %}
-            {% if staticMenu2.menuItems %}
-            <ul class="nav nav-inline  justify-content-end ">
-               {{ nav.render_menu(staticMenu2.menuItems) }}
-            </ul>
-            {% endif %}
-         </div>
+      <div class="col-md-12 col-sm-12">
+         <p class="copyright-text">© {{ "now"|date("Y") }} {{ this.theme.site_name }}. Toate drepturile sunt rezervate.</p>
       </div>
    </div>
-</div>
