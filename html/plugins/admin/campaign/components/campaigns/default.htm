@@ -1,0 +1,12 @@
+{% set campaigns = __SELF__.campaigns %}
+
+<div class="container">
+    {% for campaign in campaigns %}
+        <div>
+            <h2>{{ campaign.name }}</h2>
+        </div>
+        <div>
+            <img src="{{ campaign.picture.thumb(200,auto) }}">
+        </div>
+    {% endfor %}
+</div>
