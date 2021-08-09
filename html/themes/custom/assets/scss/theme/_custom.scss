@@ -3,6 +3,43 @@
 ==========================================================  C U S T O M . C S S  ==========================================
 ===========================================================================================================================
 */
+
+#main-menu ul  .dropdown .dropdown-menu {
+    background-color:#6255a4;
+    border-radius: 7%;
+}
+#main-menu ul  .dropdown .dropdown-menu a {
+    color:#fff;
+    border-radius: 4%;
+}
+#main-menu ul  .dropdown .dropdown-menu a:hover {
+    color:rgb(225, 206, 255) !important;
+    border-radius: 4%;
+}
+
+#main-menu ul > li > a{
+    color:#6255a4;
+    font-weight: bold;
+}
+
+.top-bar{
+    background-color:#6255a4;
+}
+
+#top-bar-content{
+    display: flex;
+    justify-content: space-between;
+    background-color: #6255a4;
+    color: white;
+}
+
+#doneaza{
+    border-radius: 25px;
+    background-color: #de419a;
+    border: none;
+    padding: 3px 21px;
+}
+
 .navbar-brand{
     width: 170px;
     position: absolute;
@@ -20,8 +57,11 @@
 }
 
 .page-header-area{
-    text-align: center;
+        text-align: center;
     margin-top: 5%;
+}
+.page-header-content h2{
+    font-family:Galano-black !important;
 }
 
 .logo-shadow{
@@ -48,8 +88,14 @@
     height: 28px;
     position: absolute;
     bottom: -1px;
-
 }
+
+    .footer-icon{
+        //min-widt: 80px;
+        width:40px;
+    }
+
+
 
 #footer{
     background: #eaf6fb !important;
@@ -57,6 +103,60 @@
 #footer #copyright {
     background: #6255a4 !important;
     color:white !important;
+    text-align:center;
+    padding:0;
 }
 
+.copyright-text{
+    margin:0;
+}
+
+.footer-wave{
+    background: #d5edf700 url(/themes/custom/assets/images/shape_despartitor-top.svg) center !important;
+    width: 100% !important;
+    height: 28px;
+    position: relative;
+    top: 0px;
+}
+
+
+#social-media-footer{
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+#phone-number-footer{
+    font-family: Galano-black;
+    color: #6255a4;
+    font-size: 38px;
+}
+
+
+@media(max-width: 1024px) {
+    .navbar-brand{
+        width: 160px;
+        left: 42%;
+    }
+}
+
+@media(max-width: 767px) {
+    .navbar-brand{
+        width: 135px;
+        left: 26%;
+    }
+}
+
+@media(max-width: 425px) {
+    #main-menu{
+        text-align:center;
+    }
+
+    .navbar-brand{
+        width: 125px;
+        left: 27%;
+        top:60px;
+    }
+}
 
