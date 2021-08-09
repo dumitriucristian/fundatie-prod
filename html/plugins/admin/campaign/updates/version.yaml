@@ -3,6 +3,3 @@
 1.0.2:
     - 'Created table admin_campaign_'
     - builder_table_create_admin_campaign_.php
-1.0.3:
-    - 'Updated table admin_campaign_'
-    - builder_table_update_admin_campaign_.php
