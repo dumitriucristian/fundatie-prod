@@ -59,4 +59,24 @@
     color:white !important;
 }
 
+@media(max-width: 1024px) {
+    .navbar-brand{
+        width: 160px;
+        left: 42%;
+    }
+}
 
+@media(max-width: 767px) {
+    .navbar-brand{
+        width: 135px;
+        left: 26%;
+    }
+}
+
+@media(max-width: 425px) {
+    .navbar-brand{
+        width: 125px;
+        left: 27%;
+        top:60px;
+    }
+}
