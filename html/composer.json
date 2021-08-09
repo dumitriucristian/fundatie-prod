@@ -20,7 +20,8 @@
         "offline/sitesearch-plugin": "^1.5",
         "rahman/blogtags-plugin": "^1.0",
         "martin/ssbuttons-plugin": "^1.3",
-        "grofgraf/contactme-plugin": "^1.1"
+        "grofgraf/contactme-plugin": "^1.1",
+        "rainlab/builder-plugin": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.0|^9.0",

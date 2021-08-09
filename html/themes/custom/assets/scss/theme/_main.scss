@@ -2,6 +2,7 @@
 $color_mercury_approx: #e2e6e7;
 $color_storm_dust_approx: #666;
 $white: #fff;
+$purple:#6255a4;
 $red: red;
 $color_stiletto_approx: #a22f30;
 $black: #000;
@@ -20,7 +21,7 @@ $color_concrete_approx: #f3f3f3;
 $color_shark_approx: #292929;
 $color_atlantis_approx: #9c3;
 $color_mojo_approx: #c74041;
-$color_bright_turquoise_approx: #00d3f9;
+$color_bright_turquoise_approx: #6255a4;
 $color_summer_green_approx: #9bb5ac;
 $color_arrowtown_approx: #998675;
 $blaze_orange: #f60;
@@ -77,7 +78,21 @@ $color_gravel_approx: #484848;
 $black_5: rgba(0, 0, 0, 0.05);
 
 //fonts
-$font_0: $first_font;
+@font-face {
+    font-family: "Galano-black";
+    src: url("/themes/custom/assets/fonts/Galano-Grotesque-Black_0.otf");
+  }
+
+  @font-face {
+    font-family: "Galano-light";
+    src: url("/themes/custom/assets/fonts/Galano-Grotesque-Light_0.otf");
+  }
+  @font-face {
+    font-family: "Galano-semi-bold";
+    src: url("/themes/custom/assets/fonts/Galano-Grotesque-Semi-Bold_0.ot;f")
+  }
+
+$font_0: "Galano-light";
 $font_1: $second_font;
 
 body {
@@ -1029,7 +1044,7 @@ i {
 					margin: 0;
 					line-height: 16px;
 					font-weight: 400;
-					border-top: 1px solid $color_mercury_approx;
+					/*border-top: 1px solid $color_mercury_approx;*/
 					transition: all 0.3s ease-in-out 0s;
 					&:hover {
 						background: transparent;
@@ -1070,7 +1085,7 @@ i {
 			padding: 28px 20px;
 			font-weight: 400;
 			line-height: 18px;
-			text-transform: uppercase;
+			text-transform: lowercase;
 		}
 		> .dropdown:hover > ul.dropdown-menu {
 			webkit-animation: MenuFadeIn 400ms;
@@ -2637,22 +2652,24 @@ footer {
 	padding: 20px 0;
 }
 .page-header-content {
+	font-family:Galano-black;
+	color:$purple;
 	display: table-cell;
 	vertical-align: middle;
 	h2 {
-		color: $white;
+		color: $purple;
 		font-size: 36px;
 		font-weight: 600;
 		text-transform: capitalize;
 	}
 	h4 {
-		color: $white;
+		color: $purple;
 		font-size: 36px;
 		font-size: 1.6rem;
 		text-transform: capitalize;
 	}
 	p {
-		color: $white;
+		color:$purple;
 		font-style: italic;
 		text-transform: capitalize;
 	}
@@ -2858,8 +2875,9 @@ footer {
 	#main-menu ul {
 		> li > a {
 			font-size: 13px;
-			font-weight: 400;
+			font-weight: bold;
 			padding: 28px 10px;
+			color: #6255a4;
 		}
 		.dropdown .dropdown-menu a {
 			border-top: 1px solid $color_mercury_approx;
