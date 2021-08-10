@@ -23,7 +23,9 @@
                         <h3>{{ campaign.target_money }} ron</h3>
                     </div>
                 </div>
-                <button type="button" class="btn btn-warning mt-4">detalii</button>
+                <a href="campanii/{{ campaign.slug }}">
+                    <button type="button" class="btn btn-warning mt-4">detalii</button>
+                </a>
             </div>
         </div>
     {% endfor %}
