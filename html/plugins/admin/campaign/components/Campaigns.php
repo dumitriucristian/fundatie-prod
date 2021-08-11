@@ -15,6 +15,11 @@ class Campaigns extends ComponentBase
         ];
     }
 
+    public function init()
+    {
+        $this->addComponent('Admin\Campaign\Components\SingleCampaign', 'singleCampaign',['year','campaign_type']);
+    }
+
     public function onRun()
     {
         $this->campaigns = $this->loadCampaigns();
