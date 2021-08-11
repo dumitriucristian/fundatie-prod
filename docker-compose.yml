@@ -14,11 +14,11 @@ services:
       - code-network
 
     environment:
-      - DB_TYPE=${DB_TYPE}
-      - DB_HOST=${DB_HOST} #DB_HOST should match the service name of the database container
-      - DB_DATABASE=${DB_DATABASE}
-      - DB_USERNAME=${DB_USERNAME}
-      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_TYPE=mysql
+      - DB_HOST=fundatie_mysql_1 #DB_HOST should match the service name of the database container
+      - DB_DATABASE=fundatie
+      - DB_USERNAME=root
+      - DB_PASSWORD=root
     container_name: fundatie_web_1
 
   mysql:
@@ -27,8 +27,8 @@ services:
     ports:
       - 3306:3306
     environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=fundatie
 
     volumes:
       - mysql-data:/var/lib/mysql
