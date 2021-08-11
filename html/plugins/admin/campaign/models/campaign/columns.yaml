@@ -1,6 +1,6 @@
 columns:
     name:
-        label: Name
+        label: Nume
         type: text
         searchable: true
         sortable: true
@@ -8,4 +8,14 @@ columns:
         label: Target
         type: number
         searchable: false
+        sortable: true
+    year:
+        label: An
+        type: number
+        searchable: true
+        sortable: true
+    campaign_type:
+        label: 'Tipul campaniei'
+        type: text
+        searchable: true
         sortable: true
