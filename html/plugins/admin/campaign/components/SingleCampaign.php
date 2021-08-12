@@ -4,6 +4,7 @@ use Cms\Classes\ComponentBase;
 use Request;
 use October\Rain\Exception\ApplicationException;
 use Admin\Campaign\Models\Campaign;
+use Admin\Campaign\Models\CampaignType;
 
 class SingleCampaign extends ComponentBase
 {
@@ -35,10 +36,11 @@ class SingleCampaign extends ComponentBase
             'name' => [
                 'title' => 'Campaign name',
                 'type' => 'dropdown',
-                'placeholder' => 'Select a campaign type',
+                'placeholder' => 'Select a campaign name',
                 'required' => true,
-                'depends' => ['year','campaign_type'],
+                'depends' => ['year','campaignType'],
             ],
+            
         ];
     }
 
@@ -50,26 +52,28 @@ class SingleCampaign extends ComponentBase
 
     public function getCampaignTypeOptions()
     {
-        $values =  Campaign::groupBy('campaign_type')->pluck('campaign_type')->toArray();
-        return array_combine($values,$values);
+        $valuesName = CampaignType::pluck('name')->toArray();
+        $valuesId = CampaignType::pluck('id')->toArray();
+        return array_combine($valuesId,$valuesName);
     }
-
+    
     public function getNameOptions()
     {
         $year = Request::input('year');
         $campaignType = Request::input('campaignType');
-        $values = Campaign::where('year',$year)->where('campaign_type',$campaignType)->pluck('name')->toArray();
+
+        $values = Campaign::where('year',$year)->where('campaign_type_id',$campaignType)->pluck('name')->toArray();
         return array_combine($values,$values);
     }
-
+    
     public function onRun()
     {
         $this->campaign = $this->loadCampaign($this->property('campaignType'),$this->property('year'),$this->property('name'));
     }
 
-    protected function loadCampaign($campaign_type,$year,$name)
+    protected function loadCampaign($campaign_type_id,$year,$name)
     {
-        return Campaign::where('campaign_type',$campaign_type)->where('year',$year)->where('name',$name)->first();
+        return Campaign::where('campaign_type_id',$campaign_type_id)->where('year',$year)->where('name',$name)->first();
     }
     
 }

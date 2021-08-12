@@ -14,9 +14,9 @@ class BuilderTableCreateAdminCampaign extends Migration
             $table->string('name');
             $table->dateTime('expire_at');
             $table->integer('target_money');
-            $table->enum('campaign_type',['ziua_esarfelor','adopta_o_mama','mesaje_de_iubire','incaltam_un_copil','invatatoare_anului'])->nullable();
             $table->string('slug')->nullable();
-            $table->enum('year',range(2000,2040))->nullable();
+            $table->integer('year');
+            $table->integer('campaign_type_id');
             $table->integer('raised_money')->default(0);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

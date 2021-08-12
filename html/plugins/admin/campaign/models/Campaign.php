@@ -25,6 +25,10 @@ class Campaign extends Model
         'picture' => 'System\Models\File',
     ];
 
+    public $belongsTo = [
+        'campaign_type' => 'Admin\Campaign\Models\CampaignType',
+    ];
+
     public function getPercentageMoney() :int
     {
         return $this->raised_money*100 / $this->target_money;
