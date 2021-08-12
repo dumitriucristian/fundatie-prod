@@ -14,8 +14,3 @@ columns:
         type: number
         searchable: true
         sortable: true
-    campaign_type:
-        label: 'Tipul campaniei'
-        type: text
-        searchable: true
-        sortable: true
