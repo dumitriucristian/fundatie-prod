@@ -8,7 +8,8 @@ class Plugin extends PluginBase
     {
         return [
             'Admin\Campaign\Components\Campaigns' => 'campaigns',
-            'Admin\Campaign\Components\SingleCampaign' =>'campaign'
+            'Admin\Campaign\Components\SingleCampaign' =>'campaign',
+            'Admin\Campaign\Components\Sponsors' => 'sponsors',
         ];
     }
 

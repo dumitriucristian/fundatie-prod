@@ -22,12 +22,7 @@ class Campaigns extends ComponentBase
 
     public function onRun()
     {
-        $this->campaigns = $this->loadCampaigns();
-    }
-
-    protected function loadCampaigns()
-    {
-        return Campaign::all();
+        $this->campaigns = Campaign::all();
     }
     
 }
