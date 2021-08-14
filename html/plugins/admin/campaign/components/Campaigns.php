@@ -15,14 +15,14 @@ class Campaigns extends ComponentBase
         ];
     }
 
-    public function onRun()
+    public function init()
     {
-        $this->campaigns = $this->loadCampaigns();
+        $this->addComponent('Admin\Campaign\Components\SingleCampaign', 'singleCampaign',['year','campaign_type']);
     }
 
-    protected function loadCampaigns()
+    public function onRun()
     {
-        return Campaign::all();
+        $this->campaigns = Campaign::all();
     }
     
 }
