@@ -1,0 +1,29 @@
+{% set campaign = __SELF__.campaign %}
+{% set sponsors = __SELF__.sponsors %}
+
+
+{% if sponsors.first() != null %}
+    <h2 class="text-center mb-5">Multumim sponsorilor</h2>
+    <div class="container">
+        <div class="row">
+            <div class="owl-carousel owl-three d-flex justify-content-center">
+                {% for sponsor in sponsors %}
+                <div class="">
+                    <a class="justify-content-center align-items-center d-flex"
+                     href="https://www.paypal.com/donate/?business=fundatia%40zurli.ro&amp;no_recurring=0&amp;currency_code=EUR&amp;Z3JncnB0="
+                        target="_blank">
+                        <div class="icon-sponsor"><img src="{{ sponsor.picture.thumb(400,auto) }}" class="fr-fil fr-dib"></div>
+                    </a>
+                </div>
+                <!--
+                    <div class="oval">
+                        <a class="btn col-2" href="javascript:void(0) ">
+                            <img src="{{ sponsor.picture.thumb(400,auto) }}">
+                        </a>
+                    </div>
+                -->
+        {% endfor %}
+        </div>
+        </div>
+    </div>
+{% endif %}

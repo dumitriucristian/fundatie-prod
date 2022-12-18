@@ -1,0 +1,17 @@
+url = "/campanii/:campaign_type"
+layout = "fundatie"
+title = "campanii"
+
+[campaigns]
+type = "{{ :campaign_type }}"
+==
+<?
+function onStart()
+{
+    $this['title'] = "Campanii";
+}
+?>
+==
+<div class="container justify-content-center">
+   {% component 'campaigns' %}
+</div>

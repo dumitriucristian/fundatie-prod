@@ -1,0 +1,35 @@
+  <form data-request="onSave" data-request-validate>
+    <div class="mb-3">
+      <label for="subject" class="form-label">Subiect</label>
+      <input type="text" class="form-control" name="subject" id="subject">
+      <span data-validate-for="subject"  class="error-msg"></span>
+    </div>
+    <div class="mb-3">
+      <label for="text" class="form-label">Text</label>
+      <textarea class="form-control" name="text" rows="3" id="text"></textarea>
+      <span data-validate-for="text"  class="error-msg"></span>
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Nume</label>
+      <input type="text" class="form-control" name="name" id="name">
+      <span data-validate-for="name"  class="error-msg"></span>
+    </div>
+    <div class="mb-3">
+      <label for="phoneNumber" class="form-label">Numar de telefon</label>
+      <input type="text" class="form-control" name="phone_number" id="phoneNumber">
+      <span data-validate-for="phone_number"  class="error-msg"></span>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" name="email" id="email">
+      <span data-validate-for="email" class="error-msg"></span>
+    </div>
+
+    <div class="mb-3">
+      <label for="verificare" class="form-label"> Cod Verificare: 6 + 2  </label>
+      <input type="verificare" class="form-control" name="verificare" id="verificare">
+      <span data-validate-for="verificare" class="error-msg"></span>
+    </div>
+
+    <button type="submit" data-attach-loading class="btn btn-aboneazate">Trimite</button>
+  </form>

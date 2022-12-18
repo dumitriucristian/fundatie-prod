@@ -1,0 +1,59 @@
+[campaigntypelist]
+==
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container p-3">
+        <button 
+             class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a href="/doneaza" class="btn rounded-pill d-flex btn-doneaza">
+        <img class="inimioara-donatii p-1 ms-2" src="{{'/assets/images/inimioara_donatii.svg'|theme}}">
+        <span>doneaza</span>
+    </a>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mb-2 ps-3 mb-lg-0 col-12 col-lg-4 d-flex justify-content-evenly">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" aria-current="page" href="#">despre</a>
+                  <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/istoric">Istoric</a></li>
+                    <li><a class="dropdown-item" href="/misiune">Misiune</a></li>
+                    <li><a class="dropdown-item" href="/echipa">Echipa</a></li>
+                    <li><a class="dropdown-item" href="/media">Media</a></li>
+                    <li><a class="dropdown-item" href="/rapoarte">Rapoarte</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="/campanii" id="navbarDropdown" role="button" data-bs-toggle="dropdown">campanii</a>
+                {% component 'campaigntypelist' %}
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="/noutati">noutati</a>
+            </li>
+        </ul>
+        <div class="col-2"></div>
+        <ul class="navbar-nav mb-2 ps-3 mb-lg-0 col-xl-4  d-flex justify-content-evenly">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" aria-current="page" href="#" aria-labelledby="navbarDropdown">parteneri</a>
+                <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/parteneri">Reteaua Zurli</a></li>
+                    <li><a class="dropdown-item" href="/sponsori">Sponsori</a></li>
+                </ul>
+                
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">fii ajutor zurli</a>
+                <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/voluntariat">Voluntariat</a></li>
+                    <li><a class="dropdown-item" href="/companii">Companii</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact">contact</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

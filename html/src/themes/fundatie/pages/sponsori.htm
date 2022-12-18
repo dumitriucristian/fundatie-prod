@@ -1,0 +1,14 @@
+title = "Sponsori"
+url = "/sponsori"
+layout = "detalii-campanie"
+[sponsorsall]
+==
+<?
+function onStart()
+{
+    $this['title'] = "Sponsori";
+}
+?>
+==
+{% partial 'header-section' %}
+{% component 'sponsorsall' %}

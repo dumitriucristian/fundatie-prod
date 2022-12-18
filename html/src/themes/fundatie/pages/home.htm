@@ -1,0 +1,69 @@
+url = "/"
+layout = "home"
+title = "home"
+
+[campaignshomepage]
+
+[newsletter]
+==
+<div class="homepage">
+  <div class="container d-flex flex-column justify-content-center">
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <h1 class="col-12 col-xl-7 home-title">Împreună facem Roata Binelui să se învârtă!</h1>
+      </div>
+      <div class="row m-b-5">
+          <h2 class="custom-h2">Doneaza din binele tau</h2>
+          <div class="col-lg-1"></div>
+
+          <div class="col-lg-5 col-11">
+              <img src="{{'assets/images/doneaza.png'|theme}}" class="img-fluid" />
+          </div>
+          <div class="col-lg-5 col-11 excerpt d-flex justify-content-center flex-column">D
+              <p class="text-center pt-4" style="line-height: 25px;">REDIRECȚIONEAZĂ 3.5% DIN IMPOZITUL PE VENIT CĂTRE FUNDAȚIA ZURLI. Completează online, descarcă și trimite Formularul 230. Fii una din spițele care fac Roata Binelui să se învârtă. Intră în comunitatea oamenilor care fac bine și nu întorc privirea atunci când cei din jur au nevoie de ajutor.
+                  Completează formularul și ajută-ne să reușim și anul aceasta să încălțăm copiii desculți ai României, să ajutăm mamele fugite din calea soților agresivi,
+                  să le aducem un zâmbet copiilor din secțiile de oncopediatrie ori celor care nu au casă ori părinți care să-i iubească
+              </p>
+              <a href="/formular" class="btn rounded-pill mb-2">Doneaza 3.5%</a>
+          </div>
+      </div>
+      <br />    <br />    <br />
+      <div class="row mt-5">
+        <div class="col-lg-1"></div>
+        <div class="col-xl-10 col-12 p-0" style="position: relative;  top: -60px;">
+            {% component 'campaignshomepage' %}
+        </div>
+      </div>
+  </div>
+
+  <div class="container-flex blue-container">
+    <div class="top-header-shadow  bg-white"></div>
+    <div class="container">
+      <h2 class="custom-h2">Articole media</h2>
+      <div class="row">
+        <div class="col-xxl-1 col-12"></div>
+        <div class="col-xxl-10  col-12">
+
+         {% partial 'articole-media' %}
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-header-shadow" style="position:relative;"></div>
+  </div>
+
+  <div class="">
+    <h2 class="custom-h2">Cum ne poți ajuta?</h2>
+    {% partial 'doneaza' %}
+  </div>
+
+
+  <div class="container pb-5">
+    <div class="row">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8 col-12">
+        {% component 'newsletter' %}
+    </div>
+    </div>
+  </div>
+</div>

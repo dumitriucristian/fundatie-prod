@@ -1,0 +1,31 @@
+columns:
+    name:
+        label: Nume
+        type: text
+        searchable: true
+        sortable: true
+    target_money:
+        label: Target
+        type: number
+        searchable: false
+        sortable: true
+    year:
+        label: An
+        type: number
+        searchable: true
+        sortable: true
+    homepage:
+        label: Homepage
+        type: switch
+    finalized:
+        label: Finalizat
+        type: switch
+    raised_money:
+        label: 'Suma stransa'
+        type: number
+        searchable: true
+        sortable: true
+    order:
+        label: 'Numarul de ordine'
+        type: number
+        sortable: true

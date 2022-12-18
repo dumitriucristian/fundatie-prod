@@ -1,0 +1,36 @@
+url = "/return"
+layout = "fundatie"
+title = "return"
+==
+<?
+use Admin\Netopia\Models\Donation;
+
+public function onStart()
+{
+
+    if( empty($_GET['orderId'])){
+
+        $this['text'] = "Pagina accesata incorect.";
+
+    }elseif(Donation::where('payment_id',$_GET['orderId'])->get()->count() == 0 ) {
+
+            $this['text'] = "Tranzactie inexistenta";
+    }else{
+
+        $donation = Donation::where('payment_id',$_GET['orderId'])->get();
+        //dd($donation)
+        if($donation[0]->status == "confirmed"){
+            $this['text'] = "Donatia dumneavoastra a fost inregistrata cu succes. Va multumim.";
+        }else{
+            $this['text'] = "Donatia dumneavoastra nu a putut fi finalizata. Va rugam reincercati.";
+        }
+    }
+}
+?>
+==
+<div class="container">
+    <h3 class="text-center m-5 p-5">{{ text }}</h3>
+    <p class="m-5 p-5 text-center">
+        Daca ati intampinat dificultati in procesul de plata, va rugam sa ne contactati. contact@fundatiazurli.ro
+    </p>
+</div>

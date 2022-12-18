@@ -1,0 +1,56 @@
+@import '../general';
+
+.oval{
+    a {
+        background-color: white;
+        width: 100%;
+        height: auto;
+        padding: 2em;
+        border-radius: 5em;
+        box-shadow: #6ea8ff42 0 0 100px;
+        margin:1em;
+        img{
+            display: block;
+            position: relative;
+            margin: 0 auto;
+        }
+    }
+    
+  
+}
+
+.oval-text {
+    font-size: 22px;
+    color: #333;
+    font-family: "galano-semi-bold";
+}
+
+
+@media (max-width: 1024px) {
+    .oval a {
+        background-color: white;
+        padding: 2em;
+        margin: 1em;
+        img {
+            position: relative;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .icon-oval img {
+        height: 40px;
+    }
+
+    .oval a {
+        width: auto;
+    }
+
+    
+    .oval-text {
+        font-size: 16px;
+        text-align: center;
+        padding-left: 20px;
+    }
+}

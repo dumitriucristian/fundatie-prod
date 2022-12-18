@@ -1,0 +1,10 @@
+columns:
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+    order:
+        label: Ordine
+        type: number
+        sortable: true

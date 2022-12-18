@@ -1,0 +1,37 @@
+columns:
+    firstname:
+        label: Prenume
+        type: text
+        searchable: true
+        sortable: true
+    lastname:
+        label: Nume
+        type: text
+        searchable: true
+        sortable: true
+    email:
+        label: Email
+        type: text
+        searchable: true
+        sortable: true
+    phone_number:
+        label: Telefon
+        type: text
+        searchable: true
+    county:
+        label: Judet
+        type: text
+        searchable: true
+    city:
+        label: Localitate
+        type: text
+        searchable: true
+    created_at:
+        label: 'Data inregistrarii'
+        type: date
+    newsletter:
+        label: newsletter
+        type: text
+    uuid:
+        label: uuid
+        type: text

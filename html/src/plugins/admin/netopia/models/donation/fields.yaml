@@ -1,0 +1,23 @@
+fields:
+    sum:
+        label: Suma
+        span: auto
+        required: 1
+        type: number
+    surname:
+        label: Prenume
+        span: auto
+        type: text
+    name:
+        label: Nume
+        span: auto
+        type: text
+    email:
+        label: email
+        span: auto
+        type: text
+    message:
+        label: 'Text area'
+        size: ''
+        span: auto
+        type: textarea

@@ -1,0 +1,47 @@
+
+<div class="container">
+	<div id="netopia-form" class="row justify-content-center">
+		<div class="col-12 col-md-6">
+			<form
+				data-request="onSave"
+				data-request="onRefreshTime"  
+				data-request-validate 
+				data-request-flash class="mt-5"
+				data-request-update="netopia: '#netopia-form'"				
+			>
+				<!-- 	If you want the values in the payment page to be prefilled, you need to request them from the customer and POST them to the payment gateway. If not, the customer will have to fill them in the secure page on mobilpay.ro -->
+				<div class="form-group">
+					<legend class="text-center">Fii Ajutor Zurli!<br/> Donează online, prin card bancar. <br/>Te rugăm să completezi următorul formular cu datele tale. <br/>Îți mulțumim pentru donație și prietenie.</legend>
+
+					<label for="billing_last_name">Nume:</label>
+					<span data-validate-for="billing_last_name"  class="error-msg"></span>
+					<input type="text" name="billing_last_name"  class="form-control" />
+			
+
+					<label for="billing_first_name">Prenume:</label>
+					<span data-validate-for="billing_first_name"  class="error-msg"></span>
+					<input type="text" name="billing_first_name"   class="form-control" />	
+			
+		
+					<label for="billing_email">E-mail:</label>
+					<span data-validate-for="billing_email"  class="error-msg"></span>
+					<input type="email" name="billing_email" class="form-control"  />
+				
+
+					<label  for="billing_mobile_phone">Telefon mobil:</label>
+					<span data-validate-for="billing_mobile_phone"  class="error-msg"></span>
+					<input type="text" name="billing_mobile_phone"  class="form-control" />
+				
+					
+					
+					<label>Ai un mesaj pentru noi? Scrie-l aici:</label><textarea name="message"  class="form-control" rows="10"></textarea>
+					<label>Valoare donație (lei):</label>
+					<span data-validate-for="sum"  class="error-msg"></span>
+					<input type="text" name="sum"  class="form-control" />
+					
+				</div>
+				<button type="submit" class="btn btn-aboneazate mt-4">pasul urmator</button>
+			</form>
+		</div>
+	</div>
+</div>

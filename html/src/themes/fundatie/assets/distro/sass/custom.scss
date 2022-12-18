@@ -1,0 +1,523 @@
+//@import "~bootstrap/scss/bootstrap";
+//$bg-light:white;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "sections/navbar";
+@import "sections/top-bar";
+@import "sections/banner_container_campanii";
+@import "sections/footer";
+@import "sections/excerpt";
+@import "components/campaign";
+@import "components/round-container";
+@import "components/oval-container";
+@import "components/long-btn";
+
+$font-path: "/themes/fundatie/assets/fonts";
+
+
+@font-face {
+    // This is parsed as a normal function call that takes a quoted string.
+    src: url("#{$font-path}/Itim-Regular.ttf");
+    font-family: "itim";
+}
+
+@font-face {
+    // This is parsed as a normal function call that takes a quoted string.
+    src: url("#{$font-path}/Galano-Grotesque-Black_0.otf");
+    font-family: "galano-black";
+}
+
+@font-face {
+    // This is parsed as a normal function call that takes a quoted string.
+    src: url("#{$font-path}/Galano-Grotesque-Semi-Bold_0.otf");
+    font-family: "galano-semi-bold";
+}
+
+
+@font-face {
+    // This is parsed as a normal function call that takes a quoted string.
+    src: url("#{$font-path}/Galano-Grotesque-Light_0.otf");
+    font-family: "galano-light";
+}
+
+form{
+    label{
+        font-family: 'itim';
+        color: $purple;
+        font-size: 21px;
+        margin-top: 15px;
+    }
+    legend{
+        color: $purple;
+        font-size: 20px;
+    }
+}
+
+.icon-sponsor{
+    height: 110px;
+    box-shadow: rgb(63 81 181 / 46%) 0px 0px 100px;
+    border-radius: 49px;
+    margin: 10px;
+    width: 300px;
+    padding: 10px;
+    img{
+        object-fit: contain;
+        height: 80px;
+        padding: 15px;
+    }
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.btn-doneaza:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.contact{
+ 
+    position:relative;
+    margin-top: -200px;
+
+    h1{
+        position:relative;
+        top: -70px;
+    }
+}
+
+.blue-container{
+    background-color: #eaf6fb;
+    padding: 0 0 4em 0;
+    margin: 2em 0 2em 0;
+}
+
+.blue-container {
+    .bottom-header-shadow {
+        bottom: -66px;
+    }
+}
+
+.btn{
+    font-family: 'itim';
+    color: $purple;
+}
+
+.owl-stage{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.article-header{
+    position: relative;
+    width: 100%; 
+    top: -142px;
+}
+a.logo{
+    position: absolute;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    padding: 0.7em;
+    z-index: 25;
+    display: block;
+    border-radius: 50%;
+    top: -55px;
+}
+.category-link{
+    font-family: 'galano-semi-bold';
+    color: #fcde37;
+}
+
+.header-gallery{
+    background-color:transparent;
+    position:relative;
+    .bottom-header-shadow {
+        background-image: url(/themes/fundatie/assets/images/shape_despartitor_bottom.svg);
+        background-position: center;
+        width: 100%;
+        position: absolute;
+        height: 27px;
+        z-index: 111;
+        bottom: 0;
+    } 
+
+    .top-header-shadow{
+        position: absolute;
+        z-index: 2;
+    }
+    
+    margin-bottom: -110px;
+}
+
+.owl-carousel .owl-item img {
+    display: block ;
+    width: 100%;
+    max-height: 450px;
+   
+}
+.owl-header .owl-item img{
+    display: block;
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+h1{
+       font-size: 50px;
+}
+
+h2{
+    font-family: galano-black;
+    color: #6255a4;
+    text-align: center;
+    font-size: 35px;
+    padding: 50px 0 50px 0;
+}
+
+.custom-h2{
+    font-size:50px;
+    color:#6255a4;
+}
+
+.owl-gallery .owl-item img{
+    display: block;
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+}
+
+
+
+.article{
+    img{
+        display: block;
+        margin: 0 auto;
+        border-radius: 2em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        max-width:100%;
+    }
+    p{
+        text-align: justify;
+    }
+}
+
+iframe{
+    color: #80808085;
+    font-family: "galano-semi-bold";
+    font-size: 1.2em;
+    border-radius: 2em;
+    margin:0 auto;
+    text-align: center;
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 0em;
+    max-width:100%;
+}
+
+.article-date{
+    color: #80808085;
+    font-family: "galano-semi-bold";
+    font-size: 1.2em;
+    text-align:center;
+}
+
+blockquote{
+    background-color: white;
+    border-radius: 1em;
+    text-align: center;
+    font-size: 1.2em;
+    font-style: italic;
+    padding: 1em;
+    box-shadow: #0e00802b 0px 0px 20px;
+    display: block;
+    margin: 0 auto;
+    max-width: 700px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  
+    p{
+        margin:0;
+        padding:0;
+        text-align: center !important;
+    }
+    .author{
+        color:$purple;
+        font-weight: bold;
+        font-size: 0.7em;
+        font-family: 'galano-black';
+    }
+}
+
+blockquote::before{
+    font-family: "galano-black"; 
+    font-weight: 900; 
+    content: '"';
+    color:$purple;
+    font-size:1em;
+}
+
+.social-media-btn{
+    width: 75px;
+    height: 75px;
+    display: block;
+}
+
+
+body {
+    font-family:galano-light;
+}
+
+h1, h2, h3, h3 {
+    font-family:galano-black;
+    color: $purple;
+    text-align: center;
+
+}
+
+//Custom components
+.btn-doneaza-small{
+    background-color: $pink;
+    color:white;
+    font-weight:bold;
+    max-width: 140px;
+    padding:1px;
+
+}
+.btn-doneaza{
+    background-color: $pink;
+    color:white;
+    font-weight:bold;
+    font-family: "itim";}
+
+.btn-doneaza:hover {
+    color: white !important;;
+}
+
+a {
+    font-weight: bold;
+    color: $pink;
+}
+ .content-campaign p{
+     img{
+        width: 100%;
+        border-radius: 2em;
+     }
+ }
+
+  p > img{
+    border-radius: 2em;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    width:100%;
+ }
+
+ ul.dropdown-menu{
+    background-color: $purple;
+    color: white;
+    text-align: center;
+    border-radius: 1.5em;
+    font-family: itim;
+ }
+ .dropdown-item {
+     color:white;
+ }
+  a.dropdown-item:hover{
+    background-color:transparent;
+    color:$yellow;
+}
+ a.nav-link:hover { 
+    color:$pink !important;
+}
+
+.homepage{
+    position: relative;
+    margin-top: -250px;
+}
+
+
+.form-control{
+    border-radius: 2em;
+  }
+
+  button.btn.btn-aboneazate, .btn-aboneazate{
+    background-color: #fce037;
+    width: 100% ;
+    border-radius: 2em;
+  }
+
+  .form-label{
+    font-family: 'galano-semi-bold';
+    font-size: 1.3em;
+    color: $purple;
+
+}
+
+.home-title{
+    position: relative;
+    top: -48px;
+    font-size: 60px;
+    margin: 0 0 30px 0;
+}
+
+
+p{
+    font-size:22px;
+}
+
+@media (max-width: 1024px) {
+    h2{
+        text-align: center;
+        padding: 0;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    h1{
+        font-size:25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+
+        margin-top:-300px;
+                
+        h1{
+            position: relative;
+            top: -30px;
+        }
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .pareneri-short{
+        font-size: 15px;
+        line-height: 15px;
+        text-align: center;
+    }
+
+
+    .home-title{
+        position: relative;
+        top: -45px;
+        font-size: 2em;
+    }
+
+    .article-content{
+        position:relative;
+        top:-40px;
+    }
+
+    p {
+        font-size:15px;
+    }
+}
+
+@media (max-width: 425px) {
+   
+   
+
+    .articol{
+        margin-top:20px;
+    }
+
+    .gallery-image{
+        height:250px;
+        
+    }
+
+ .form-control::placeholder{
+    color: #8080807a;
+ }
+
+ .btn-aboneazate{
+    width: 100%;
+    border-radius: 2em;
+    color: #6255a4;
+    background-color: #fce037;
+    font-family: 'galano-semi-bold';
+    border: none;
+    margin-top:20px;
+ }
+ .error-msg{
+    color: #dc4199;
+ }
+
+ .btn-aboneazate:hover{
+   color: #dc4199;
+ }
+
+ 
+
+ .articol{
+
+     .article-header{
+         position:relative;
+         top:-145px;
+     }
+
+     .top-header-shadow{
+      top:0;
+     }
+     .logo{
+         top:-60px;
+     }
+ }
+
+
+ .form-label{
+     font-family: itim;
+     font-size: 1.3em;
+     color: $purple;
+
+ }
+
+
+ .blue-container{
+    background-color: #eaf6fb;
+    height: 660px;
+    position:relative;
+
+    .bottom-header-shadow{
+        
+        position: absolute;
+        bottom: 11px;
+        height: 30px;
+    }
+  }
+
+ h1 .header-title{
+    color: #6255a4;
+    font-family: 'itim';
+    font-size: 2em;
+  }
+
+.custom-h2{
+    font-size: 35px;
+}
+
+
+}
+
+
+iframe{
+    width:100%;
+}
+
+
+.form-group{
+    background-color: #d5edf7;
+    padding: 12px 0;
+    border-top: solid #6255a4 1px;
+    margin: 10px 0;
+    border-radius: 6px;
+}
+ 

@@ -1,0 +1,18 @@
+{% set campaign = __SELF__.campaign %}
+
+<h1 class="text-center m-5">{{campaign.name}}</h1>
+
+{% partial "campaign" campaign=campaign %}
+<div class="campaign-description mt-5 mb-5">
+    <div clas="row">
+        <h1 class="col-xs-12 col-lg-10 mb-5 mt-5">{{post.title}}</h1>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-lg-1 p-2">
+            {% partial 'social-media' %}
+         </div>   
+         <div class="col-xs-12 col-lg-11">
+        {{ campaign.description|raw }}
+        </div>
+    </div>
+</div>

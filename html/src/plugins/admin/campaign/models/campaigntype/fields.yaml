@@ -1,0 +1,18 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        required: 1
+        preset:
+            field: name
+            type: slug
+        type: text
+    order:
+        label: Ordine
+        span: auto
+        type: number

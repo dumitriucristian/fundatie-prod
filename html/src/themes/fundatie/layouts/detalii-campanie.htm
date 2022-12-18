@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+     <head>
+      {% partial 'meta' %}
+      {% partial 'styles' %}
+    </head>
+    {% partial 'header' %}
+    {% partial 'navigation' %}
+    <body>
+        <div class="articol">
+            {% page %}
+        </div>
+         {% partial 'footer' %}
+        {% partial 'scripts' %}
+        {% framework extras %}
+        <script>
+          $(document).ready(function(){
+      
+           $(".owl-gallery").owlCarousel({
+             stagePadding:0,
+             loop:true,
+             responsive : {
+               0 : {
+                 items:1
+               },
+               480 : {
+                 items: 1
+               },
+             }
+           });
+
+           $(".owl-one").owlCarousel({
+             stagePadding:0,
+             loop:true,
+             responsive : {
+               0 : {
+                 items:1
+               },
+               480 : {
+                 items: 1
+               },
+             }
+           });
+          
+           $(".owl-three").owlCarousel({
+             stagePadding:0,
+             loop:false,
+             responsive : {
+               0 : {
+                 items:1
+              },
+               480 : {
+                  items: 1
+               },
+               1024 : {
+                 items: 3
+               },
+
+             }
+           });
+
+           $(".owl-five").owlCarousel({
+             stagePadding:0,
+             loop:true,
+             responsive : {
+               0 : {
+                 items:1
+               },
+               768 : {
+                 items: 2
+              },
+              1240 : {
+                 items: 3
+              }, 
+              1440 : {
+                 items:4
+              } 
+            }
+          })
+
+           $(".owl-header").owlCarousel({
+             stagePadding:0,
+             loop:true,
+             autoplay:true,
+             autoplayTimeout:8000,
+             autoplaySpeed:5000,
+             autoplayHoverPause:true,
+             responsive : {
+               0 : {
+                 items:1
+               },
+               480 : {
+                 items: 1
+              } ,
+            }
+          })
+          });
+      </script>
+  </body>
+</html>

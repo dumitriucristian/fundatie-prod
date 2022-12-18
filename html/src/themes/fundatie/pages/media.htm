@@ -1,0 +1,59 @@
+url = "/rapoarte"
+layout = "fundatie"
+title = "Rapoarte de activitate"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "media"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog-post"
+postPage = "blog-post"
+==
+<?
+function onStart()
+{
+    $this['title'] = "Rapoarte de activitate";
+}
+?>
+==
+{% set posts = blogPosts.posts %}
+
+<div class="container">
+    <div class="row">
+        <h3 class="mb-4">Raport de activitate 2020</h3>
+        
+        <p class="text-center">Anul 2020 a fost unul plin de provocări și de exeperințe care ne-au ajutat să nedefinim mai bine scopul. 
+            Ne bucurăm că ați fost parte din proiectele FundațieiZurli și că împreunā facem Roata Binelui sā se invârtā.
+            An de an, punem la cale campanii care să vină în ajutorul copiilor și părințiloraflați în situații speciale.
+            Tot ceea ce facem aducem bucurie în viața copiilor la care ajungem, indiferentdacă problemele sunt de educație, 
+            sănătate sau viață socială. Îi ajutăm pepărinți să îi învețe pe cei mici, copiii aflați în familii fară probleme majore,
+             lecțiagenerozității. În campaniile noastre mângâiem suflete de copii, părinți și buniciși le amintim că nu sunt singuri în lupta lor. 
+             Noi putem să facem multe dar împreună, știm că putem să mutăm munții dinloc și să construim o lume mai bună pentru copiii și părinții români.
+            </p>
+            <br />
+            <p class="text-center">
+               <a href="/themes/fundatie/assets/docs/raport-fundatia-zurli-2020.pdf" style="border-radius:20px;" target="_blank" class="btn btn-rounded-pill btn-doneaza mt-4" role="button">Detalii raport 2020</a>
+            </p>
+
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="row">
+        <h2>Articole din media</h2>
+        <div class="owl-carousel owl-five">
+            {% for post in posts %}
+                <div class="item excerpt d-flex flex-column align-items-center">
+                   <span> {{ post.published_at|date('M d') }}</span>
+                   {% if post.featured_images.count %}
+                        <img data-src="{{ post.featured_images[0].filename }}" src="{{  post.featured_images[0].path }}" alt="{{  post.featured_images[0].description }}">
+                   {% endif %}
+                  <p class="excerpt-text">{{ post.title }}</p>
+                    <a href="{{ post.url }}" class="btn rounded-pill">detalii</a>
+                </div>
+             {% endfor %}
+        </div>
+    </div>
+</div>

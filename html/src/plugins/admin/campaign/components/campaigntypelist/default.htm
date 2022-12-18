@@ -1,0 +1,6 @@
+{% set campaignType = __SELF__.campaignType %}
+<ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+    {% for campaignTypeSingle in campaignType %}
+        <li><a class="dropdown-item" href="{{ campaignTypeSingle.urlToCampaignType() }}">{{ campaignTypeSingle.name }}</a></li>
+    {% endfor %}
+</ul>

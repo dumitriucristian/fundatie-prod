@@ -1,0 +1,42 @@
+url = "/noutati"
+layout = "fundatie"
+title = "noutati"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "noutati"
+postPage = "blog-post"
+==
+<?
+function onStart()
+{
+    $this['title'] = "Noutati";
+}
+?>
+==
+{% set posts = blogPosts.posts %}
+<div class="container">
+    <div class="row">
+        <div class="col-xxl-1 col-lg-2  col-12"></div>
+        <div class="col-xxl-10 col-lg-8 col-12 pt-5"></div>
+
+            <div class="owl-carousel owl-five">
+                {% for post in posts %}
+                    <div class="item excerpt d-flex flex-column align-items-center">
+                    <span> {{ post.published_at|date('M d') }}</span>
+                    {% if post.featured_images.count %}
+                            <img data-src="{{ post.featured_images[0].filename }}" 
+                            src="{{  post.featured_images[0].path }}"
+                            alt="{{  post.featured_images[0].description }}">
+                    {% endif %}
+                    <p class="excerpt-text"> <b>{{ post.title }}</b></p>
+                        <a href="{{ post.url }}" class="btn rounded-pill">detalii</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

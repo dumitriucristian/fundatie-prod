@@ -1,0 +1,66 @@
+[staticPage]
+useContent = 1
+default = 0
+==
+<!DOCTYPE html>
+<html>
+     <head>    
+      {% partial 'meta' %}
+      {% partial 'styles' %}
+    </head>
+    {% partial 'header' %}
+    {% partial 'navigation' %}
+    <body>
+      
+      {% partial 'header-section' %}
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-1"></div>
+              <div class="col-lg-10 col-12" style="text-align:justify !important;">
+                {% page %}
+              </div>
+          </div>
+        </div>
+      </div>
+
+        {% partial 'footer' %}
+        {% partial 'scripts' %}
+        <script>
+          $(document).ready(function(){
+           $(".owl-header").owlCarousel({
+             stagePadding:0,
+             loop:true,
+             autoplay:true,
+             autoplayTimeout:8000,
+             autoplaySpeed:5000,
+             autoplayHoverPause:true,
+             responsive : {
+               0 : {
+                 items:1
+               },
+               480 : {
+                 items: 1
+              } ,
+            }
+          })
+
+          $(".owl-gallery").owlCarousel({
+             stagePadding:0,
+             loop:true,
+             autoplay:true,
+             autoplayTimeout:8000,
+             autoplaySpeed:5000,
+             autoplayHoverPause:true,
+             responsive : {
+               0 : {
+                 items:1
+               },
+               480 : {
+                 items: 1
+              } ,
+            }
+          })
+        });
+      </script>
+  </body>
+</html>

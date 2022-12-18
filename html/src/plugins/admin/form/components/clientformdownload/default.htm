@@ -1,0 +1,10 @@
+{% set client = __SELF__.client %}
+
+<div class="container text-center">
+    <h2>Va multumim si va rugam sa descarcati formularul dumneavoastra</h2>
+    <p> Va  rugam sa il semnati, sa adaugati CNP-ul dumneavoastra in capitolul 1 iar in capitolul 2 suma anuala care doriti sa fie donata.</p>
+        <p> Atentie, aceasta suma, nu poate  rerezenta mai mult de 3.5% din venitul dumneavoastra anual. </p>
+    <a href="{{ client.downloadFormLink() }}" download>
+    <button class="btn btn-primary" style="color:white;">Apasa pentru a descarca fisierul</button>
+    </a>
+</div>

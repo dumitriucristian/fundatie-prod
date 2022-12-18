@@ -1,0 +1,4 @@
+title: Contacts
+modelClass: Admin\Form\Models\Contact
+toolbar:
+    buttons: reorder_toolbar

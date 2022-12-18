@@ -1,0 +1,11 @@
+plugin:
+    name: 'admin.netopia::lang.plugin.name'
+    description: 'admin.netopia::lang.plugin.description'
+    author: Admin
+    icon: oc-icon-money
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Donatii
+        url: admin/netopia/donations
+        icon: icon-money

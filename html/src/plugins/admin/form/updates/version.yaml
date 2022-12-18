@@ -1,0 +1,41 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table admin_form_client'
+    - builder_table_create_admin_form_client.php
+1.0.3:
+    - 'Updated table admin_form_client'
+    - builder_table_update_admin_form_client.php
+1.0.4:
+    - 'Updated table admin_form_client'
+    - builder_table_update_admin_form_client_2.php
+1.0.5:
+    - 'Created table admin_form_newsletter'
+    - builder_table_create_admin_form_newsletter.php
+1.0.6:
+    - 'Created table admin_form_contact'
+    - builder_table_create_admin_form_contact.php
+1.0.7:
+    - 'Updated table admin_form_client'
+    - builder_table_update_admin_form_client_3.php
+1.0.8:
+    - 'Updated table admin_form_client'
+    - builder_table_update_admin_form_client_4.php
+1.0.9:
+    - 'Updated table admin_form_client'
+    - builder_table_update_admin_form_client_5.php
+1.0.10:
+    - 'Updated table admin_form_client'
+    - builder_table_update_admin_form_client_6.php
+1.0.11:
+    - 'Updated table admin_form_client'
+    - builder_table_update_admin_form_client_7.php
+1.0.12:
+    - 'Updated table admin_form_client'
+    - builder_table_update_admin_form_client_8.php
+1.0.13:
+    - 'Updated table admin_form_client'
+    - builder_table_update_admin_form_client_9.php
+1.0.14:
+    - 'Updated table admin_form_client'
+    - builder_table_update_admin_form_client_10.php

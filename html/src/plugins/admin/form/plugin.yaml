@@ -1,0 +1,24 @@
+plugin:
+    name: 'admin.form::lang.plugin.name'
+    description: 'admin.form::lang.plugin.description'
+    author: Admin
+    icon: oc-icon-asterisk
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Form
+        url: admin/form/clients
+        icon: icon-life-ring
+        sideMenu:
+            'Newsletter Subscriber':
+                label: 'Newsletter Subscriber'
+                url: admin/form/newsletters
+                icon: icon-mail-forward
+            clients:
+                label: Clients
+                url: admin/form/clients
+                icon: icon-smile-o
+            contact:
+                label: Contact
+                url: admin/form/contacts
+                icon: icon-anchor

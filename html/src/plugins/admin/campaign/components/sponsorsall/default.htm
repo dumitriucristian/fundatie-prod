@@ -1,0 +1,25 @@
+{% set sponsors = __SELF__.sponsors %}
+
+<div class="container mt-5 mb-5">
+    {% for sponsor in sponsors %}
+        <div class="container campaign p-3 mt-4 mb-4">
+            <div class="row">
+                <div class="img-wrapper  col-lg-6  col-12 m-0 p-0">
+                    <img src="{{ sponsor.picture.thumb(600,auto)}}" style="object-fit:contain; padding:4em;">
+                </div>
+
+                <div class="col-lg-6 col-12 m-0 p-0">
+                    <div class="campaign-details p-3 d-flex flex-column justify-content-around">
+                        <p class="title text-center">{{ sponsor.name }}</p>
+                        {{ sponsor.description|raw }}
+                        <div class="details mt-2 mt-md-4">
+                            <p class="text-center">
+                                <a href="{{ sponsor.page_sponsor }}" target="_blank" class="detail-btn btn rounded-pill" >detalii</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

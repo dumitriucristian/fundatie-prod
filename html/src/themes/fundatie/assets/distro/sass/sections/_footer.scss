@@ -1,0 +1,69 @@
+@import "../general";
+
+.bottom-footer{
+    background-color: $purple;
+    color:white;
+}
+
+a {
+    color:grey;
+}
+
+.phone{
+    color:$purple;
+    font-size: 2.2em;
+    font-weight: bold;
+    font-family: "galano-black";
+}
+.footer{
+    background-color: $skyblue;
+    .footer-icon{
+        width: 6em;
+        height: 6em;
+    }
+
+    a{
+        font-size: 0.8em;
+        color: #7b7b7b;
+    }
+
+    p{
+        font-size: 0.8em;
+        color: #7b7b7b;
+        font-family: 'galano-light';
+        line-height: 20px;
+    }
+
+    .phone{
+        font-size: 4.2em;
+    }
+}
+.bottom-footer{
+    p{
+        font-size: 0.8em;
+    }
+}
+.top-footer-shadow{
+    width: 100%;
+    height:25px;
+    background-image: url('/themes/fundatie/assets/images/shape_despartitor_header.svg');
+    background-position: center;
+}
+
+@media (max-width: 425px) {
+    .footer{
+        
+        .phone{
+            font-size: 2.2em;
+        }
+
+        
+        .footer-icon{
+            width:3.6em;
+            height: 3.6em;
+        }
+    }
+
+}
+
+

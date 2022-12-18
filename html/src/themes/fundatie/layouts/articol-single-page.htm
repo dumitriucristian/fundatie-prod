@@ -1,0 +1,60 @@
+[staticPage]
+useContent = 1
+default = 0
+==
+<!DOCTYPE html>
+<html>
+     <head>    
+      {% partial 'meta' %}
+      {% partial 'styles' %}
+    </head>
+    {% partial 'header' %}
+    {% partial 'navigation' %}
+    <body>
+     
+        {% page %}
+     
+        {% partial 'footer' %}
+        {% partial 'scripts' %}
+        {% framework extras %}
+        <script>
+          $(document).ready(function(){
+           $(".owl-header").owlCarousel({
+             stagePadding:0,
+             loop:true,
+             autoplay:true,
+             autoplayTimeout:8000,
+             autoplaySpeed:5000,
+             autoplayHoverPause:true,
+             responsive : {
+               0 : {
+                 items:1
+               },
+               480 : {
+                 items: 1
+              } ,
+            }
+          })
+
+          $(".owl-five").owlCarousel({
+             stagePadding:0,
+             loop:true,
+             responsive : {
+               0 : {
+                 items:1
+               },
+               768 : {
+                 items: 2
+              },
+              1240 : {
+                 items: 4
+              }, 
+              1500 : {
+                 items: 4
+              } 
+            }
+          })
+        });
+      </script>
+  </body>
+</html>

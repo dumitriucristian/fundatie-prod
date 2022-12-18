@@ -1,0 +1,47 @@
+url = "/campanie/:slug/:year"
+layout = "detalii-campanie"
+title = "Campanie"
+
+[campaign]
+year = "{{ :year }}"
+slug = "{{ :slug }}"
+
+[sponsors]
+year = "{{ :year }}"
+slug = "{{ :slug }}"
+
+[years]
+year = "{{ :year }}"
+slug = "{{ :slug }}"
+
+[partnerscampaign]
+year = "{{ :year }}"
+slug = "{{ :slug }}"
+
+[campaigncarousel]
+year = "{{ :year }}"
+slug = "{{ :slug }}"
+==
+{% component 'campaigncarousel' %}
+<div class="container d-flex justify-content-center article-content">
+    <div class="col-lg-10 col-12 m-0 p-0">
+        <h1 class="text-center">{{campaign.slug}}</h1>
+
+        {% component "campaign" %}
+
+        <a class="long-btn text-center mt-2 mb-2" href="/doneaza"><img  class="me-2" src="{{'assets/images/inimioara_donatii.svg'|theme}}">doneaza</a>
+
+        {% component "sponsors" %}
+        {% component "partnerscampaign"%}
+        {% component "years" %}
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xxl-1 col-lg-2  col-12"></div>
+        <div class="col-xxl-10 col-lg-10 col-12 pt-5"></div>
+        {% partial "campaign-articles"%}
+    </div>
+</div>     
+    </div>
+</div>

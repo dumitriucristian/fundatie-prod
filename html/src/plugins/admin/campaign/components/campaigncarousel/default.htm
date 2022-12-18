@@ -1,0 +1,42 @@
+{% set campaign = __SELF__.campaign %}
+    {% if campaign.pictures_carousel|length %}
+    <div class="header-gallery container-flex">
+        <div class="top-header-shadow  bg-white"></div>
+        <a class="logo rounded-circle navbar-brand position-relative" href="#">
+            <img src="{{'/assets/images/logo_fundatia_zurli.svg'|theme}}" >
+        </a>
+        <div class="article-header  d-flex justify-content-center">
+            <div class="owl-carousel owl-header">
+                {% for image in campaign.pictures_carousel %}
+                <div><img  class="gallery-image" src="{{ image.path}}"></div>
+                {% endfor %}
+            </div>
+            <div class="bottom-header-shadow"></div>   
+        </div>
+    </div>
+    {% elseif campaign.picture|length %}
+    <div class="header-gallery container-flex">
+        <div class="top-header-shadow  bg-white"></div>
+        <a class="logo rounded-circle navbar-brand position-relative" href="/">
+            <img src="{{'/assets/images/logo_fundatia_zurli.svg'|theme}}" >
+        </a>
+        <div class="article-header  d-flex justify-content-center">
+            <div class="owl-carousel owl-header">
+                
+                <div><img  class="gallery-image" src="{{ campaign.picture.getPath()}}"></div>
+                
+            </div>
+            <div class="bottom-header-shadow"></div>   
+        </div>
+    </div>
+    {% else %}
+        <div class="content-banner container-flex align-items-center d-flex flex-column mt-5 mb-5">
+            <div class="top-header-shadow  bg-light"></div>
+            <a class="logo p-4 rounded-circle navbar-brand position-relative" href="/"><img src="{{'/assets/images/logo_fundatia_zurli.svg'|theme}}" ></a>
+            <div><h1 class="text-center header-title">Campanie</h1></div>
+            <div class="bottom-header-shadow"></div>
+       
+        </div>
+        <div class="container-flex" style=" height:50px;"></div>
+    {% endif %}
+

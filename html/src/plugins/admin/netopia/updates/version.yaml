@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table admin_netopia_donations'
+    - builder_table_create_admin_netopia_donations.php
+1.0.3:
+    - 'Updated table admin_netopia_donations'
+    - builder_table_update_admin_netopia_donations.php

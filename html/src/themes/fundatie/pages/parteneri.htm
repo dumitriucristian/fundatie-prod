@@ -1,0 +1,21 @@
+url = "/parteneri"
+layout = "detalii-campanie"
+title = "parteneri"
+
+[partners]
+==
+<?
+function onStart()
+{
+    $this['title'] = "Parteneri";
+}
+?>
+==
+{% partial 'header-section' %}
+<div class="container d-flex justify-content-center">
+ {% page %}
+</div>
+
+<div class="container d-flex justify-content-center">
+{% component 'partners' %}
+</div>

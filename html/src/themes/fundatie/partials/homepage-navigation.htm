@@ -1,0 +1,52 @@
+[campaigntypelist]
+==
+<div class="container">
+  <div class="row">
+    <button 
+        class="navbar-toggler text-start align-items-baseline col-6 col-md-9" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a href="/doneaza" class="mt-md-0 btn rounded-pill d-flex btn-doneaza-small col-6 col-md-3 col-lg-2 align-self-center">
+        <img class="inimioara-donatii p-1 ms-2" src="{{'/assets/images/inimioara_donatii.svg'|theme}}">
+        <span>doneaza</span>
+    </a>
+    
+    <div class="collapse navbar-collapse mt-4 mb-4 col-md-10" id="navbarNav">
+        <ul class="navbar-nav mb-2 ps-3 mb-lg-0 col-xs-12 col-lg-4 d-flex justify-content-xs-center justify-content-lg-evenly text-center">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggl" aria-current="page" href="#" data-bs-toggle="dropdown">despre</a>
+                <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/istoric">Istoric</a></li>
+                    <li><a class="dropdown-item" href="/misiune">Misiune</a></li>
+                    <li><a class="dropdown-item" href="/echipa">Echipa</a></li>
+                    <li><a class="dropdown-item" href="/media">Media</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                campanii
+                </a>
+                {% component 'campaigntypelist' %}
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="/noutati">noutati</a>
+            </li>
+        </ul>
+        <div class="col-2"></div>
+        <ul class="navbar-nav mb-2 ps-3 mb-lg-0 col-xs-12 col-lg-4 d-flex justify-content-xs-center justify-content-lg-evenly text-center align-items-center">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/parteneri">parteneri</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#">fii ajutor zurli</a>
+                <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/voluntariat">Voluntariat</a></li>
+                    <li><a class="dropdown-item" href="/companii">Companii</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact">contact</a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+[photoAlbum]
+slug = "test"
+photoPage = 404
+thumbMode = "auto"
+thumbWidth = 640
+thumbHeight = 480
+photosOnPage = 12
+==
+{% component "photoAlbum" %}
+{% set albums = photoAlbum.album %}
+<div class="container d-flex flex-column justify-content-center">
+   <div class="owl-carousel owl-one">
+       {% for photo in albums.photos %}
+          <div> <img src="{{ photo.thumb }}" /></div>
+       {% endfor %}
+   </div>
+</div>

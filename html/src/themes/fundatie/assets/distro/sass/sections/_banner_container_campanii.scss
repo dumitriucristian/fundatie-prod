@@ -1,0 +1,103 @@
+@import "../general.scss";
+
+.content-banner{
+    height:230px;
+    color:$purple;
+    background-image: url('/themes/fundatie/assets/images/bg-sectiune.jpg');
+    background-position: center;
+    position:relative;
+
+    .header-title{
+        color: #6255a4;
+        font-family: 'itim';
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-top: -20px;
+      }
+}
+
+.content-banner-home{
+    height: 800px;
+    color: #6255a4;
+    background-image: url(/themes/fundatie/assets/images/bg-desktop-hp.jpg);
+    background-position: center;
+    background-size: cover;
+
+    h1{
+        font-family: Galano-black;
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+}
+
+.top-header-shadow{
+    width: 100%;
+    height:25px;
+    background-image: url('/themes/fundatie/assets/images/shape_despartitor_header_top.svg');
+    background-position: center;
+    background-color: #fff0 !important;
+}
+
+.bottom-header-shadow{
+    background-image: url(/themes/fundatie/assets/images/shape_despartitor_bottom.svg);
+    background-position: center;
+    width: 100%;
+    position: absolute;
+    bottom: -2px;
+    height: 32px;
+}
+
+.logo{
+    width:150px;
+    background-color: #ffffff;
+    top:-70px;
+}
+.logo-home{
+    background-color:transparent;
+    display: block;
+    max-width: 433px;
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 100px;
+    top:40px;
+
+}
+
+@media (max-width: 1024) {
+    .logo-home{
+        top:40px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .logo-home{
+        top:15px;
+    }
+}
+
+@media (max-width: 425px) {
+    .logo-home{
+        top:90px;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo-home{
+        top:140px;
+    }
+}
+
+
+    #navbarNav.show{
+        padding: 20px;
+        background: white;
+        border-radius: 30px;
+        box-shadow: #6255a45c 0px 0px 100px;
+        z-index: 99999;
+
+    }

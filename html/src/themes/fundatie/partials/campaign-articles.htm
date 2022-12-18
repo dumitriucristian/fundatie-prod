@@ -1,0 +1,35 @@
+[postsInSeries]
+series = "{{ :slug }}"
+orderBy = "published_at asc"
+page = "{{ :page }}"
+resultsPerPage = 10
+postPage = "blog-post"
+categoryPage = "noutati"
+==
+<?
+function onStart()
+{
+    $this['title'] = "Campanie";
+}
+?>
+==
+{% if postsInSeries.posts | length %}
+<h2>Citeste articolele campaniei "{{ postsInSeries.series.title }}"</h2>
+<div class="container">
+    <div class="row">
+        <div class="owl-carousel owl-five">
+            {% for post in postsInSeries.posts %}    
+            <div class="item excerpt d-flex flex-column align-items-center">
+                <span> {{ post.published_at|date('M d') }}</span>
+                {% if post.featured_images.count %}
+                    <img data-src="{{ post.featured_images[0].filename }}" src="{{  post.featured_images[0].path }}" alt="{{  post.featured_images[0].description }}">
+                {% endif %}
+            <p class="excerpt-text">{{ post.title }}</p>
+                <a href="{{ post.url }}" class="btn rounded-pill">detalii</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+

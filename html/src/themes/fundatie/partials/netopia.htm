@@ -1,0 +1,17 @@
+<div class="container">
+	<div id="netopia-form" class="row justify-content-center">
+		<div class="col-6">
+            <form name="frmPaymentRedirect" method="post" action="{{paymentURL}}">
+                <input type="hidden" name="env_key" value="{{envKey}}"/>
+                <input type="hidden" name="data" value="{{encData}}"/>
+                <p class="text-center">Vei fi redirectionat catre pagina de plati Mobilpay</p>
+                <p class="text-center">
+                   Daca doresti sa continui.
+                </p>
+                <p class="text-center">
+                    <input type="submit" class="btn btn-aboneazate" value="Mergi la Mobilpay"/> <span>sau</span><br />
+                    <a href="/" class="btn"><button class="btn btn-aboneazate" >Inapoi in site</button></a></p>
+            </form>
+        </div>
+    </div>
+</div>

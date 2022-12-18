@@ -1,0 +1,10 @@
+name: Donations
+form: $/admin/netopia/models/donation/fields.yaml
+modelClass: Admin\Netopia\Models\Donation
+defaultRedirect: admin/netopia/donations
+create:
+    redirect: 'admin/netopia/donations/update/:id'
+    redirectClose: admin/netopia/donations
+update:
+    redirect: admin/netopia/donations
+    redirectClose: admin/netopia/donations
